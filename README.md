@@ -1,13 +1,12 @@
 # [Iterators and Generators (JavaScript)](https://docs.microsoft.com/en-us/scripting/javascript/advanced/iterators-and-generators-javascript)
 
-=
 
 An iterator is an object that is used to traverse a container object like a list. In JavaScript, an iterator object is not a distinct built-in object, but is an object that implements a next method to access the `next` item in the container object.
 
 In Microsoft Edge, you can create your own custom iterators. However, it is generally much easier to use generators, which greatly simplify the creation of iterators. Generators are a type of function that is a factory for iterators. To create a custom iterator using a generator function, see [Generators](#Generators).
 
 ```
-### Caution
+Caution
 
 Generators are supported in Microsoft Edge with experimental JavaScript features enabled (about:flags).
 ```
