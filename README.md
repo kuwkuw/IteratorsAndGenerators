@@ -1,4 +1,4 @@
-#[Iterators and Generators (JavaScript)](https://docs.microsoft.com/en-us/scripting/javascript/advanced/iterators-and-generators-javascript)
+# [Iterators and Generators (JavaScript)](https://docs.microsoft.com/en-us/scripting/javascript/advanced/iterators-and-generators-javascript)
 ==
 An iterator is an object that is used to traverse a container object like a list. In JavaScript, an iterator object is not a distinct built-in object, but is an object that implements a next method to access the `next` item in the container object.
 
@@ -10,7 +10,7 @@ In Microsoft Edge, you can create your own custom iterators. However, it is gene
 Generators are supported in Microsoft Edge with experimental JavaScript features enabled (about:flags).
 ```
 
-###Iterators
+### Iterators
 
 The implementation of a JavaScript iterator involves two or three objects that conform to specific interfaces:
 *Iterable interface
@@ -20,7 +20,7 @@ The implementation of a JavaScript iterator involves two or three objects that c
 By using these interfaces, you can create custom iterators. This allows you to traverse an iterable object using the `for...of` statement.
 
 
-###Iterable interface
+### Iterable interface
 
 The Iterable interface is the required interface for an iterable object (an object for which an iterator can be obtained). For example, `C` in `for (let e of C)` must implement the Iterable interface.
 
@@ -34,7 +34,7 @@ This property must be a function that accepts no arguments and returns an object
 
 Many built-in types, including arrays, are now iterable. The `for...of` loop consumes an iterable object. (However, not all built-in iterables are iterators. For example, an Array object is not an iterator itself, but it is iterable, whereas an ArrayIterator is also iterable.)
 
-###Iterator interface
+### Iterator interface
 
 The object returned by the Symbol.iterator method must implement the `nex`t method. The `next` method has the following syntax.
 
@@ -46,7 +46,7 @@ The `next` method is a function that returns a value. The function returns an ob
 
 Iterators may also include a `return` method to ensure that the iterator is disposed properly when the script is finished with it.
 
-###IteratorResult interface
+### IteratorResult interface
 
 The IteratorResult interface is the required interface for the result of the `next` method on an iterator. The object returned by `next` must provide a `done` and `value` property.
 
@@ -59,7 +59,7 @@ The `done` property returns the status of an iterator's `next` method call, eith
 If `done` is false, the `value` property returns the current iteration element value. If `done` is true, this is the return value of the iterator, if a return value is provided. If the iterator does not have a return value, `value` is undefined. In that case, the `value` property may be absent from the conforming object if it does not inherit an explicit value property.
 
 
-###Generators
+### Generators
 
 To easily create and use custom iterators, create a generator function by using the function* syntax along with one or more `yield` expressions. The generator function returns an iterator (that is, a generator), which enables the generator function body to execute. The function executes to the next `yield` or `return` statement.
 
